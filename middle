@@ -1,0 +1,58 @@
+const eqArrays = function(array1, array2) {
+
+  let result = false;
+
+  if (array1.length !== array2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] === array2[i]) {
+      result = true;
+    } else {
+      result = false;
+    }
+  }
+  
+  return result;
+
+};
+
+const assertArraysEqual = function(actual, expected) {
+
+  let result = false;
+
+  if (eqArrays(actual, expected)) {
+    result = true;
+    console.log(`Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    result = false;
+    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+  }
+
+  return result;
+
+};
+
+const middle = function(arrayList) {
+  
+  let result = [];
+
+  if (arrayList.length < 3) {
+    return result;
+  }
+
+  if (arrayList.length % 2 === 0) {
+    result = [arrayList[(arrayList.length / 2) - 1], arrayList[(arrayList.length / 2)]];
+    return result;
+  } else {
+    result = [arrayList[(arrayList.length / 2).toFixed() - 1]];
+    return result;
+  }
+
+  
+}
+
+assertArraysEqual((middle([1, 2, 3])), [2]) // => [2]
+assertArraysEqual((middle([1, 2, 3, 4, 5])),[3]);
+assertArraysEqual((middle([1, 2, 3, 4, 5, 6])), [3,4]);
