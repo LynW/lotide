@@ -1,4 +1,4 @@
-const findKey = function (object, callback) {
+const findKey = function(object, callback) {
   let result = null;
 
   for (let items of Object.keys(object)) {

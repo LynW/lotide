@@ -15,7 +15,7 @@ const middle = function(arrayList) {
   }
 
   
-}
+};
 
 module.exports = middle;
 
