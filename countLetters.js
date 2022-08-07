@@ -15,6 +15,6 @@ const countLetters = function(word) {
   }
 
   return count;
-}
+};
 
 console.log(countLetters("potato"));
