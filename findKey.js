@@ -1,8 +1,5 @@
-const assertEqual = require('./assertEqual');
-
-
 const findKey = function (object, callback) {
-  let result = {};
+  let result = null;
 
   for (let items of Object.keys(object)) {
     if (callback(object[items])) {
@@ -14,11 +11,4 @@ const findKey = function (object, callback) {
   
 };
 
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), "noma"); // => "noma"
+module.exports = findKey;
