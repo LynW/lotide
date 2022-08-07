@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@lynw/lotide",
   "version": "1.0.3",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/lynw/lotide.git"
   },
-  "author": "",
+  "author": "Carolyn Wang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lynw/lotide/issues"
