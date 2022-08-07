@@ -1,18 +1,4 @@
-const assertEqual = function(actual, expected) {
-
-  let result = false;
-
-  if (actual === expected) {
-    result = true;
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    result = false;
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-  return result;
-
-};
+const assertEqual = require('./assertEqual');
 
 const countLetters = function(word) {
   let count = {};
