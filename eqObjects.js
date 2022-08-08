@@ -2,22 +2,32 @@ const eqArrays = require('./eqArrays');
 
 const eqObjects = function(object1, object2) {
 
+  //
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
-  }
+  } else {
+    for (let item of Object.keys(object1)) {
 
-  for (const item of Object.keys(object1)) {
-
-    if (Array.isArray(object1) && Array.isArray(object2)) {
-      const compare = eqArrays(object1[item], object2[item]);
-      if (!compare || (object1[item] !== object2[item])) {
-        return false;
+      if (Array.isArray(object1[item]) && Array.isArray(object2[item])) {
+        const comparing = eqArrays(object1[item], object2[item]);
+        if (!comparing || object1[item] !== object2[item]) {
+          return false;
+        }
       }
     }
   }
-
   return true;
-
 };
 
 module.exports = eqObjects;
+
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+console.log(eqObjects(ab, ba)); // => true
+
+const abc = { a: "1", b: "2", c: "3" };
+console.log(eqObjects(ab, abc)); // => false 
+
+
+
+console.log(eqObjects({ c: "1", d: ["2", 3] }, { c: "1", d: ["2", 3, 4] }));
