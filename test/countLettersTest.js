@@ -1,5 +1,5 @@
-let assertEqual = require('../assertEqual');
-let countLetters = require('../countLetters');
+const assertEqual = require('../assertEqual');
+const countLetters = require('../countLetters');
 
 assertEqual(countLetters('chicken'), 7);
 assertEqual(countLetters(''), 0);

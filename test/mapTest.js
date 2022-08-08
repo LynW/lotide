@@ -1,4 +1,3 @@
-
 const map = require('../map');
 const assertArraysEqual = require('../assertArraysEqual');
 

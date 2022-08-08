@@ -1,5 +1,5 @@
-let assertObjectsEqual = require('../assertObjectsEqual');
-let eqObjects = require('../eqObjects');
+const assertObjectsEqual = require('../assertObjectsEqual');
+const eqObjects = require('../eqObjects');
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
