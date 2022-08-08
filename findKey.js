@@ -1,10 +1,13 @@
 const findKey = function(object, callback) {
+
   let result = null;
 
-  for (let items of Object.keys(object)) {
+  for (const items of Object.keys(object)) {
+
     if (callback(object[items])) {
       return items;
     }
+
   }
 
   return result;

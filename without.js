@@ -7,8 +7,11 @@ const without = function(source, itemsToRemove) {
       if (source[i] === itemsToRemove[j]) {
         source.splice(i, 1);
       }
+
     }
+
   }
+  
   return source;
 
 };

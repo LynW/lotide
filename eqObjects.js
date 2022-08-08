@@ -6,7 +6,8 @@ const eqObjects = function(object1, object2) {
     return false;
   }
 
-  for (let item of Object.keys(object1)) {
+  for (const item of Object.keys(object1)) {
+
     if (Array.isArray(object1) && Array.isArray(object2)) {
       const compare = eqArrays(object1[item], object2[item]);
       if (!compare || (object1[item] !== object2[item])) {
@@ -14,7 +15,9 @@ const eqObjects = function(object1, object2) {
       }
     }
   }
+
   return true;
+
 };
 
 module.exports = eqObjects;

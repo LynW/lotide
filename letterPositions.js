@@ -1,4 +1,5 @@
 const letterPositions = function(sentence) {
+
   const results = {};
   let i = 0;
 
@@ -14,6 +15,7 @@ const letterPositions = function(sentence) {
   }
 
   return results;
+  
 };
 
 module.exports = letterPositions;
