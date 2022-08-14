@@ -10,8 +10,6 @@ const myStars = {
   "Akelarre":  { stars: 3 }
 };
 
-assertEqual(findKey(myStars, x => x.stars === 2), "noma"); // => "noma"
-
-assertEqual(findKey(myStars, x => x.stars === 3), "Akaleri"); // => "noma"
-
-assertEqual(findKey(myStars, x => x.stars === 32), null); // => "noma"
+assertEqual(findKey(myStars, x => x.stars === 2), "noma");
+assertEqual(findKey(myStars, x => x.stars === 3), "Akaleri");
+assertEqual(findKey(myStars, x => x.stars === 32), null);
