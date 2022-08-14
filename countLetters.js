@@ -1,6 +1,16 @@
 const countLetters = function(word) {
 
-  return word.length;
+  let count = {};
+
+  for (const char of word) {
+    if (count[char]) {
+      count[char] += 1;
+    } else {
+      count[char] = 1;
+    }
+  }
+
+  return count;
 
 };
 
