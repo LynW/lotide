@@ -6,10 +6,9 @@ const eqObjects = function(object1, object2) {
     return false;
   } else {
     for (let item of Object.keys(object1)) {
-
       if (Array.isArray(object1[item]) && Array.isArray(object2[item])) {
         const comparing = eqArrays(object1[item], object2[item]);
-        if (!comparing || object1[item] !== object2[item]) {
+        if (!comparing) {
           return false;
         }
       }
